@@ -1,6 +1,6 @@
 # path-pattern-finder-dist
 
-Distributes the JARS for path-pattern-finder project together with a command-line launcher executable for Windows and script for Linux / MAC.
+Distributes the JARS for path-pattern-finder project together with a command-line launcher executable for Windows and script for Linux / MacOS.
 
 Please see the path-pattern-finder website for [usage](https://path-pattern-finder.github.io/).
 
