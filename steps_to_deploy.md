@@ -12,11 +12,11 @@ A note of manual steps required for deployment for a new release.
 
 5. Delete any files with a `.formatted` extension in this directory.
 
-6. Create `zip` and `tar.gz` (with ` tar -czvf file.tar.gz directory`) for this directory.
+6. Create `zip` and `tar.gz` (with `tar -czvf file.tar.gz directory`) for this directory.
 
 7. Create a new release on [pattern-path-finder-dist](https://github.com/path-pattern-finder/path-pattern-finder-dist/releases) with the version as both tag and release title.
 
-9. Add a changelog and the `zip` and ``tar.gz` files, and publish the release.
+9. Add a changelog and the `zip` and `tar.gz` files, and publish the release.
 
 10. Upload the download links in the `_config.yml` in the [website repository](https://github.com/path-pattern-finder/path-pattern-finder.github.io/blob/master/_config.yml) to the latest versions.
 
