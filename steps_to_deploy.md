@@ -1,4 +1,4 @@
-# steps to deploy
+# Steps to deploy a new release
 
 A note of manual steps required for deployment for a new release.
 
