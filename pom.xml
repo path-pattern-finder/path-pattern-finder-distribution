@@ -16,7 +16,7 @@
           <name>The MIT License (MIT)</name>
         </license>
       </licenses>
-      <inceptionYear>2019</inceptionYear>
+      <inceptionYear>2020</inceptionYear>
       <organization>
 	<name>Owen Feehan</name>
 	<url>http://www.owenfeehan.com</url>
@@ -173,7 +173,7 @@
          <dependency>
            <groupId>com.owenfeehan.pathpatternfinder</groupId>
            <artifactId>path-pattern-finder</artifactId>
-           <version>1.4.3</version>
+           <version>1.4.4</version>
          </dependency>
 
       </dependencies>

@@ -1,5 +1,5 @@
 ---------------------------------------------
-path-pattern-finder 1.4.3
+path-pattern-finder 1.4.4
 
 by Owen Feehan distributed under MIT license.
 ---------------------------------------------
