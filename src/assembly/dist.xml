@@ -35,8 +35,6 @@
   
   <fileSets>
 
-    
-    <!--  The documentation placed in the top-level folder of the Anchor distribution -->
      <fileSet>
         <directory>src/main/resources/topleveldocs</directory>
         <outputDirectory></outputDirectory>
@@ -59,7 +57,7 @@
      </fileSet>
   
   
-  	 <!--  The helper-apps used to allow easy start of Anchor on different platforms -->
+  	 <!--  The helper-apps used to allow easy start of the path-pattern-finder command line tool on different platforms -->
   	 
   	 <!-- Let's exclude the UNIX scripts we want to change permissions on -->
      <fileSet>
@@ -111,7 +109,7 @@
       <fileMode>0644</fileMode>
     </dependencySet>
     
-    <!--  The anchor-launcher and anchor-browser jars are placed in bin folder. They are simple apps used to start
+    <!--  The path-pattern-finder jar is placed in bin folder. They are simple apps used to start
       anchor from the command-line, or to start the anchor GUI -->
     <dependencySet>
       <useProjectArtifact>false</useProjectArtifact>
