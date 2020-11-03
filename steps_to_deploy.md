@@ -10,16 +10,14 @@ A note of manual steps required for deployment for a new release.
 
 4. Rename the directory `target/path-pattern-finder-dist-1.0-SNAPSHOT-dist` to `target/path-pattern-finder-X.X` where `X.X` is the correct version.
 
-5. Delete any files with a `.formatted` extension in this directory.
+5. Create `zip` and ``tar.gz` (with ` tar -czvf file.tar.gz directory`) for this directory.
 
-6. Create `zip` and ``tar.gz` (with ` tar -czvf file.tar.gz directory`) for this directory.
+6. Create a new release on [pattern-path-finder-dist](https://github.com/path-pattern-finder/path-pattern-finder-dist/releases) with the version as both tag and release title.
 
-7. Create a new release on [pattern-path-finder-dist](https://github.com/path-pattern-finder/path-pattern-finder-dist/releases) with the version as both tag and release title.
+7. Add a changelog and the `zip` and ``tar.gz` files, and publish the release.
 
-9. Add a changelog and the `zip` and ``tar.gz` files, and publish the release.
+8. Upload the download links in the `_config.yml` in the [website repository](https://github.com/path-pattern-finder/path-pattern-finder.github.io/blob/master/_config.yml) to the latest versions.
 
-10. Upload the download links in the `_config.yml` in the [website repository](https://github.com/path-pattern-finder/path-pattern-finder.github.io/blob/master/_config.yml) to the latest versions.
+9. Commit version changes in both repositories, and do a merge from `dev` to `master` if necessary.
 
-11. Commit version changes in both repositories, and do a merge from `dev` to `master` if necessary.
-
-12. Test the download links on the website (after some minutes for GitHub to recreate the website with `jekyll`).
+10. Test the download links on the website (after some minutes for GitHub to recreate the website with `jekyll`).
