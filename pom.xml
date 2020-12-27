@@ -2,8 +2,8 @@
       <modelVersion>4.0.0</modelVersion>
      
       <groupId>com.owenfeehan.pathpatternfinder</groupId>
-      <artifactId>path-pattern-finder-dist</artifactId>
-	  <name>path-pattern-finder-dist</name>
+      <artifactId>path-pattern-finder-distribution</artifactId>
+	  <name>path-pattern-finder-distribution</name>
 	  <packaging>pom</packaging>
       
         <developers>
@@ -53,20 +53,20 @@
       </properties>
      
 	<scm>
-		<connection>scm:git:git@github.com:path-pattern-finder/path-pattern-finder-dist.git</connection>
-		<developerConnection>scm:git:git@github.com:path-pattern-finder/path-pattern-finder-dist.git</developerConnection>
-		<url>https://github.com/path-pattern-finder/path-pattern-finder-dist.git</url>
+		<connection>scm:git:git@github.com:path-pattern-finder/path-pattern-finder-distribution.git</connection>
+		<developerConnection>scm:git:git@github.com:path-pattern-finder/path-pattern-finder-distribution.git</developerConnection>
+		<url>https://github.com/path-pattern-finder/path-pattern-finder-distribution.git</url>
 		<tag>path-pattern-finder-1.1</tag>
 	</scm>
   
 	<distributionManagement>
         <snapshotRepository>
 		   <id>github</id>
-            <url>https://maven.pkg.github.com/path-pattern-finder/path-pattern-finder-dist</url>
+            <url>https://maven.pkg.github.com/path-pattern-finder/path-pattern-finder-distribution</url>
         </snapshotRepository>	
 		 <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/path-pattern-finder/path-pattern-finder-dist</url>
+            <url>https://maven.pkg.github.com/path-pattern-finder/path-pattern-finder-distribution</url>
         </repository>
 	</distributionManagement>
 	
@@ -142,7 +142,7 @@
 								 </goals>
 								 <configuration>
 									  <headerType>console</headerType>
-									  <outfile>${project.build.directory}/path-pattern-finder-dist-${project.version}/path-pattern-finder-dist-${project.version}/bin/path-pattern-finder.exe</outfile>
+									  <outfile>${project.build.directory}/path-pattern-finder-distribution-${project.version}/path-pattern-finder-distribution-${project.version}/bin/path-pattern-finder.exe</outfile>
 									  <jar>path-pattern-finder</jar>
 									  <dontWrapJar>true</dontWrapJar>
 									  <errTitle>Path Pattern Finder</errTitle>
