@@ -1,4 +1,4 @@
-# steps to deploy
+# Steps to deploy a new release
 
 A note of manual steps required for deployment for a new release.
 
@@ -18,7 +18,7 @@ A note of manual steps required for deployment for a new release.
 
 8. Create a new release on [pattern-path-finder-dist](https://github.com/path-pattern-finder/path-pattern-finder-dist/releases) with the version as both tag and release title.
 
-9. Add a changelog and the `zip` and ``tar.gz` files, and publish the release.
+9. Add a changelog and the `zip` and `tar.gz` files, and publish the release.
 
 10. Upload the download links in the `_config.yml` in the [website repository](https://github.com/path-pattern-finder/path-pattern-finder.github.io/blob/master/_config.yml) to the latest versions.
 
