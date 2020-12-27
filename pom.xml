@@ -85,7 +85,7 @@
 		  </snapshots>
 		  <id>anchor</id>
 		   <name>anchor</name>
-		   <url>http://maven.anchoranalysis.org:8081/repository/anchor</url>
+		   <url>https://maven.pkg.github.com/path-pattern-finder/path-pattern-finder</url>
 		  <layout>default</layout>
 		</repository>
 	  	</repositories>
@@ -103,6 +103,32 @@
 			<build>
 				<plugins>
 	    
+		
+					  <plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>3.0.0</version>
+						<executions>
+
+						  <execution>
+							<phase>prepare-package</phase>
+							<configuration>
+							  <target>
+								
+								<echo message="Deleting the bin/ directory: ${project.build.directory}/windowsExe"/>
+								<delete dir="${project.build.directory}/windowsExe/" />
+								
+								<echo message="Building a distribution in: ${project.build.directory}/path-pattern-finder-distribution-${project.version}/windowsExe"/>					
+								<mkdir dir="${project.build.directory}/windowsExe" />
+				
+							  </target>
+							</configuration>
+							<goals>
+							  <goal>run</goal>
+							</goals>
+						  </execution>
+						</executions>
+					  </plugin>
+		  
 					<!-- LAUNCH4J -->
 					  
 					  <plugin>
@@ -112,16 +138,17 @@
 						 <executions>
 						 
 						 
-						 <!-- This generates an path-pattern-finder.exe (command-line) with Launch4J and places it in the target distribution -->
+						 <!-- This generates an path-pattern-finder.exe (command-line) with Launch4J and places it in a windowsExe directory 
+						   (for the benefit of the assembly plugin) -->
 						 <execution>
 								 <id>l4j-clui1</id>
-								 <phase>package</phase>
+								 <phase>prepare-package</phase>
 								 <goals>
 									 <goal>launch4j</goal>
 								 </goals>
 								 <configuration>
 									  <headerType>console</headerType>
-									  <outfile>${project.build.directory}/path-pattern-finder-distribution-${project.version}/path-pattern-finder-distribution-${project.version}/bin/path-pattern-finder.exe</outfile>
+									  <outfile>${project.build.directory}/windowsExe/path-pattern-finder.exe</outfile>
 									  <jar>path-pattern-finder</jar>
 									  <dontWrapJar>true</dontWrapJar>
 									  <errTitle>Path Pattern Finder</errTitle>
