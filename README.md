@@ -1,4 +1,4 @@
-# path-pattern-finder-dist
+# path-pattern-finder-distribution
 
 Distributes the JARs for path-pattern-finder project together with a command-line launcher executable for Windows and script for Linux / MacOS.
 
