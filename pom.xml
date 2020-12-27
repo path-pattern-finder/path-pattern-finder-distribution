@@ -22,7 +22,7 @@
 	<url>http://www.owenfeehan.com</url>
       </organization>
       
-      <version>1.0-SNAPSHOT</version>
+      <version>1.4.5-SNAPSHOT</version>
         <build>
             <plugins>
                 <plugin>
@@ -47,17 +47,28 @@
             </plugins>
         </build>
 
-        <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+	<properties>
+		 <maven.compiler.source>1.8</maven.compiler.source>
+           <maven.compiler.target>1.8</maven.compiler.target>
       </properties>
-      
-      	<scm>
-		<connection>scm:git:ssh://git@bitbucket.org/path-pattern-finder-dist/path-pattern-finder-dist.git</connection>
-		<developerConnection>scm:git:ssh://git@bitbucket.org/path-pattern-finder-dist/path-pattern-finder-dist.git</developerConnection>
-		<url>https://git@bitbucket.org/path-pattern-finder-dist/path-pattern-finder-dist.git</url>
-		<tag>path-pattern-finder-1.0</tag>
+     
+	<scm>
+		<connection>scm:git:git@github.com:path-pattern-finder/path-pattern-finder-dist.git</connection>
+		<developerConnection>scm:git:git@github.com:path-pattern-finder/path-pattern-finder-dist.git</developerConnection>
+		<url>https://github.com/path-pattern-finder/path-pattern-finder-dist.git</url>
+		<tag>path-pattern-finder-1.1</tag>
 	</scm>
+  
+	<distributionManagement>
+        <snapshotRepository>
+		   <id>github</id>
+            <url>https://maven.pkg.github.com/path-pattern-finder/path-pattern-finder-dist</url>
+        </snapshotRepository>	
+		 <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/path-pattern-finder/path-pattern-finder-dist</url>
+        </repository>
+	</distributionManagement>
 	
 	<!-- Provides a means of reaching the path-pattern-finder JARs -->
     <repositories>
@@ -78,13 +89,6 @@
 		  <layout>default</layout>
 		</repository>
 	  	</repositories>
-  
-	<distributionManagement>
-		<repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/path-pattern-finder/path-pattern-finder</url>
-        </repository>
-	</distributionManagement>
 	
 	<profiles>
 	
@@ -113,7 +117,7 @@
 							<phase>package</phase>
 							<configuration>
 							  <descriptors>
-								<descriptor>src/assembly/dist.xml</descriptor>
+								<descriptor>src/assembly/distribution.xml</descriptor>
 							  </descriptors>
 							  <attach>false</attach>
 							</configuration>
@@ -138,7 +142,7 @@
 								 </goals>
 								 <configuration>
 									  <headerType>console</headerType>
-									  <outfile>${project.build.directory}/path-pattern-finder-dist-${project.version}-dist/bin/path-pattern-finder.exe</outfile>
+									  <outfile>${project.build.directory}/path-pattern-finder-dist-${project.version}/path-pattern-finder-dist-${project.version}/bin/path-pattern-finder.exe</outfile>
 									  <jar>path-pattern-finder</jar>
 									  <dontWrapJar>true</dontWrapJar>
 									  <errTitle>Path Pattern Finder</errTitle>
@@ -173,7 +177,8 @@
          <dependency>
            <groupId>com.owenfeehan.pathpatternfinder</groupId>
            <artifactId>path-pattern-finder</artifactId>
-           <version>1.4.4</version>
+		 <!-- using the same version as this project -->
+           <version>${project.version}</version>
          </dependency>
 
       </dependencies>
