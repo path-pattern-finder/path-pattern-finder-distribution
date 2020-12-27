@@ -104,27 +104,6 @@
 				<plugins>
 	    
 					<!-- LAUNCH4J -->
-						 
-						 <!-- Creates a directory in target/ with all the files needed for running path-pattern-finder -->
-					  <plugin>
-						<artifactId>maven-assembly-plugin</artifactId>
-						<executions>
-						  <execution>
-							<id>make-assembly</id>
-							<goals>
-							  <goal>single</goal>
-							</goals>
-							<phase>package</phase>
-							<configuration>
-							  <descriptors>
-								<descriptor>src/assembly/distribution.xml</descriptor>
-							  </descriptors>
-							  <attach>true</attach>
-							</configuration>
-						  </execution>
-						</executions>
-					  </plugin>	
-					  
 					  
 					  <plugin>
 						 <groupId>com.akathist.maven.plugins.launch4j</groupId>
@@ -162,7 +141,29 @@
 							 </execution>
 							 
 						 </executions>
-					 </plugin>
+					 </plugin>					
+						 
+						 <!-- Creates a directory in target/ with all the files needed for running path-pattern-finder -->
+					  <plugin>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<executions>
+						  <execution>
+							<id>make-assembly</id>
+							<goals>
+							  <goal>single</goal>
+							</goals>
+							<phase>package</phase>
+							<configuration>
+							  <descriptors>
+								<descriptor>src/assembly/distribution.xml</descriptor>
+							  </descriptors>
+							  <attach>true</attach>
+							</configuration>
+						  </execution>
+						</executions>
+					  </plugin>	
+					  
+
 					 
 					 				 
 					 
