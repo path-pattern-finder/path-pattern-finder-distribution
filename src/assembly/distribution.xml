@@ -88,15 +88,6 @@
      </fileSet>
      
      
-     <fileSet>
-        <directory>src/main/resources/helperapps</directory>
-        <outputDirectory>bin</outputDirectory>
-        <includes>
-        	<include>path-pattern-finder.exe</include>
-        </includes>
-        <fileMode>0644</fileMode>
-     </fileSet>
-     
           <!-- Let's include the Windows exes -->
      <fileSet>
         <directory>target/windowsExe</directory>
