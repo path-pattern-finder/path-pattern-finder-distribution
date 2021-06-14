@@ -21,3 +21,5 @@ A note of manual steps required for deployment for a new release.
 9. Commit version changes in both repositories, and do a merge from `dev` to `master` if necessary.
 
 10. Test the download links on the website (after some minutes for GitHub to recreate the website with `jekyll`).
+
+11. Update the javadoc/ directory on the website.
